@@ -93,6 +93,26 @@ else {
 };
 
 
+###### Sub
+
+#sub fasta_parser
+#{
+#    my $datei = $_[0];
+#    my %hash;
+    #HIER PARSER EINFÜGEN
+#	return %hash;
+#}
+
+#%hash1=fasta_parser($datei1);
+#%hash2=fasta_parser($datei2);#
+
+#use fasta_zeug;
+#%hash1=fasta_zeug::fastaparser(%datei1);
+
+
+
+
+
 
 
 
