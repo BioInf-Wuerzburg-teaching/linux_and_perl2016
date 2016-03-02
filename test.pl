@@ -13,7 +13,9 @@ my $expected2 = "CTAFGTILV";
 require_ok("read_fasta");
 can_ok("read_fasta", "read_fasta");
 is($wert1, $expected1, my $test_species);
+diag("Mensch geht");
 is($wert2, $expected2, my $test_sequence);
+diag("sequence geht")
 
 # if ($output{">ID1"}->{species} eq "Mensch")
 # {
