@@ -14,7 +14,8 @@ sub new
     my $robot={
 	x=>0,
 	y=>0,
-	links=>"unten"
+	links=>"unten",
+	rechts=>"unten",    
     };
     bless $robot, 'Robot';
     return $robot;
@@ -37,7 +38,12 @@ sub links
     my $self=shift;
     return $self->{links};
 }
-
+sub rechts
+{
+    my $robot=$_[0];
+    my $pos_rechts=$robot->{'rechts'};
+    return $pos_rechts;
+}
 1;
 __END__
 # Below is stub documentation for your module. You'd better edit it!
