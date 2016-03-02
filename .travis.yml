@@ -7,9 +7,23 @@ perl:
   - "5.14"
   - "5.12"
   - "5.10.1"
+sudo:
+  false
 before_install:
-    - cd Robot
+  - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
+  - source ~/travis-perl-helpers/init
+  - build-perl
+  - perl -V
+  - cpanm --quiet --notest Log::Log4perl
+  - cd Robot
 install:
-    - cpanm -v --installdeps --notest .
-
-script: "perl Makefile.PL && make && make test"
+    - export RELEASE_TESTING=1 AUTOMATED_TESTING=1 AUTHOR_TESTING=1 HARNESS_OPTIONS=c HARNESS_TIMER=1
+    - cpanm --quiet --notest Devel::Cover::Report::Coveralls
+    - cpanm --quiet --installdeps .
+script: 
+    - perl Makefile.PL
+    - make
+    - PERL5OPT=-MDevel::Cover=-coverage,statement,branch,condition,path,subroutine prove -lrv
+    - cover
+after_success:
+    - cover -report coveralls
