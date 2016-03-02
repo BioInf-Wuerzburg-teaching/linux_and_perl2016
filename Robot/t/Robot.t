@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 10;
+use Test::More tests => 12;
 BEGIN { use_ok('Robot') };
 
 #########################
@@ -33,3 +33,9 @@ ok($Robot->{links} ne undef, "Test Undef");
 my$expect=$Robot->{links};
 $Robot->links;
 is($Robot->{links},$expect , "Test Links");
+
+can_ok('Robot', 'rechts');
+
+my $pos_rechts=$Robot->rechts();
+is($pos_rechts, 'unten');
+
