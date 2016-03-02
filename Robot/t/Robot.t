@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 7;
 BEGIN { use_ok('Robot') };
 
 #########################
@@ -20,3 +20,6 @@ my $Robot = new_ok('Robot');
 #move
 can_ok("Robot", "move");
 can_ok("Robot", "pos");
+my @pos=$Robot->pos();
+is($pos[0],0, "x-coordinate=0");
+is($pos[1],0, "y-coordinate=0");
