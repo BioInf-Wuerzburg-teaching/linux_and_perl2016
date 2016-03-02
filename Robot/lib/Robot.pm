@@ -11,7 +11,10 @@ our $VERSION = '0.1';
 
 sub new
 {
-    my $robot={};
+    my $robot={
+	x=>0,
+	y=>0,
+    };
     bless $robot, 'Robot';
     return $robot;
 }
