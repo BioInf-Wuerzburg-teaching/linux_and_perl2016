@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 BEGIN { use_ok('Robot') };
 
 #########################
@@ -25,6 +25,11 @@ my @pos=$Robot->pos();
 is($pos[0],0, "x-coordinate=0");
 is($pos[1],0, "y-coordinate=0");
 
-
+ 
 can_ok('Robot','links');
 
+ok($Robot->{links} ne undef, "Test Undef");
+
+#my$expect=$Robot->{links};
+#$Robot->links;
+#is($Robot->{links},$expect , "Test Links");
