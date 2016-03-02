@@ -1,0 +1,6 @@
+Revision history for Perl extension Robot.
+
+0.1  Wed Mar  2 14:22:02 2016
+	- original version; created by h2xs 1.23 with options
+		-A -X -b5.10.1 -nRobot --use-new-tests --skip-exporter -v0.1
+
