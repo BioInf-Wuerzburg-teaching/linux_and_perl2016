@@ -7,8 +7,6 @@ my %input = fpr::fasta_parser($datei);
 my $key=">ID2";
 my $result;
 
-#check schleife
-
 foreach my $tmp (keys %input) #$tmp als zwischenspeicher
 {
 	$result = "$tmp\n$input{$tmp}->{species}\n$input{$tmp}->{sequence}\n \n";
@@ -20,7 +18,7 @@ foreach my $tmp (keys %input) #$tmp als zwischenspeicher
 #    print "Defined\n"   if defined $input{$key};
 #    print "True\n"      if $input{$key};
 
-#CHeck fehlt noch gänzlich bisher nur Result Print
+#Testroutine
 if($input{$key}->{species} eq "Maus")
 {
 	print "Test successful. Congrats!";
