@@ -9,7 +9,7 @@ our @ISA = qw();
 our $VERSION = '0.1';
 
 
-# Preloaded methods go here.
+sub new;
 
 1;
 __END__
