@@ -8,9 +8,11 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 BEGIN { use_ok('Robot') };
 
 #########################
 
 can_ok('Robot', 'new');
+
+my $Robot = new_ok('Robot');
