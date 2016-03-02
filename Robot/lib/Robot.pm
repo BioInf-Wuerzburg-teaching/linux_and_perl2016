@@ -14,6 +14,7 @@ sub new
     my $robot={
 	x=>0,
 	y=>0,
+	links=>"unten"
     };
     bless $robot, 'Robot';
     return $robot;
