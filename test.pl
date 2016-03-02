@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 use read_fasta;
-use Test::More tests=>3;
+use Test::More tests=>4;
 
 my $datei = "fastatest.fasta";
 my %output = read_fasta::read_fasta($datei);
@@ -11,6 +11,7 @@ my $expected1 = "Mensch";
 my $expected2 = "CTAFGTILV";
 
 require_ok("read_fasta");
+can_ok("read_fasta", "read_fasta");
 is($wert1, $expected1, my $test_species);
 is($wert2, $expected2, my $test_sequence);
 
