@@ -1,6 +1,7 @@
 use warnings;
 use strict;
 use fpr;
+use Term::ANSIColor;
 
 my $datei="fanta.fasta";
 my %input = fpr::fasta_parser($datei);
@@ -21,13 +22,13 @@ foreach my $tmp (keys %input) #$tmp als zwischenspeicher
 #Testroutine
 if($input{$key}->{species} eq "Maus")
 {
-	print "Test successful. Congrats!";
-	print "Result:";
-	print "$result";
+	print color("green"), "\nTest successful. Congrats!\n\n", color("reset");
+	print "Result:\n\n";
+	print "$result\n\n";
 }
 else
 {
-	print "Test failed. You may get a coffee and look through your code.";
-	print "Result:";
-	print "$result";	
+	print color("red"), "\nTest failed. You may get a coffee and look through your code.\n\n", color("reset");
+	print "Result:\n\n";
+	print "$result\n\n";	
 }
