@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use fasta_modul;
-use Test::More tests => 4;   #tests => 4   Legt anzahl der geplanten Tests fest
+use Test::More tests => 6;   #tests => 6   Legt anzahl der geplanten Tests fest
 
 my $datei = "fasta.fa";  #laden der Datei
 
@@ -31,6 +31,10 @@ else {
 
 # With Test::More
 # is ($got, $expected, $name);
+
+
+require_ok ( 'fasta_modul');
+can_ok ('fasta_modul', 'fasta_parser');
 
 is ($fastatest{">seq3"}{"spec"}, "Maus", "Test_spec_Maus"); 
 
