@@ -9,7 +9,12 @@ our @ISA = qw();
 our $VERSION = '0.1';
 
 
-sub new;
+sub new
+{
+    my $robot={};
+    bless $robot, 'Robot';
+    return $robot;
+}
 
 1;
 __END__
