@@ -26,6 +26,9 @@ sub move
 sub pos
 {
     my $self = shift;
+    my @pos = ($self->{x},$self->{y});
+    return @pos;
+    
 }
 1;
 __END__
