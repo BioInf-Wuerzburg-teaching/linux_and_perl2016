@@ -34,8 +34,8 @@ sub pos
 
 sub links
 {
-
-
+    my $self=shift;
+    return $self->{links};
 }
 
 1;
