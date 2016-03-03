@@ -46,7 +46,18 @@ sub rechts
 }
 
 
-sub links_switch{}
+sub links_switch{
+    my $self=shift;
+    if($self->{links} eq "unten")
+    {
+	$self->{links}="oben";
+    }
+    else
+    {
+	$self->{links}="unten";
+    }
+}
+
 
 
 1;
