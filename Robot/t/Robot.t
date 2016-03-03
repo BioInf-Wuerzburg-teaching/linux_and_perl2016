@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 12;
+use Test::More tests => 13;
 BEGIN { use_ok('Robot') };
 
 #########################
@@ -39,3 +39,4 @@ can_ok('Robot', 'rechts');
 my $pos_rechts=$Robot->rechts();
 is($pos_rechts, 'unten');
 
+can_ok('Robot', 'links_switch');
