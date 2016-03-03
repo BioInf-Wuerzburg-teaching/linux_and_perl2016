@@ -62,6 +62,9 @@ sub links_switch{
 
 sub rechts_switch
 {
+    my $robot=$_[0];
+    $robot->{'rechts'} ='oben';
+    return $robot->rechts();
 }
 1;
 __END__
