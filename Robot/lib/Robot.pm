@@ -24,6 +24,9 @@ sub new
 sub move
 {
     my $self = shift;
+    $self->{x}=$_[0];
+    $self->{y}=$_[1];
+    return $self->pos();
 }
 sub pos
 {
