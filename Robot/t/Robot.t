@@ -44,4 +44,6 @@ is($Robot->links(), "oben", "Test Switch Links");
 $Robot->links_switch();
 is($Robot->links(), "unten", "Test Switch Links2");
 
+can_ok("Robot","rechts_switch");
+
 done_testing();
