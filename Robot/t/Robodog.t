@@ -19,5 +19,9 @@ my @pos_neu = $Robodog->move($x_neu,$y_neu);
 is($pos_neu [0],2, "x-coordinate=2");
 is($pos_neu [1],2, "y-coordinate=2");
 
+can_ok('Robot::Robodog', 'wag');
+
+$Robodog->wag();
+is($Robodog->{tail}, 'up');
 
 done_testing();
