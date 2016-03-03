@@ -8,7 +8,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 15;
+use Test::More;
 
 BEGIN { use_ok('Robot') };
 
@@ -45,3 +45,4 @@ $Robot->links_switch;
 is($Robot->{links}, "oben", "Test Switch Links");
 $Robot->links_switch;
 is($Robot->{links}, "unten", "Test Switch Links2");
+done_testing();
