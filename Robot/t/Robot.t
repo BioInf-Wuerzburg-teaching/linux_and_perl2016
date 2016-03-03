@@ -16,15 +16,19 @@ BEGIN { use_ok('Robot') };
 can_ok('Robot', 'new');
 my $Robot = new_ok('Robot');
 
-
-
-#move
-can_ok("Robot", "move");
+#pos
 can_ok("Robot", "pos");
 my @pos=$Robot->pos();
 is($pos[0],0, "x-coordinate=0");
 is($pos[1],0, "y-coordinate=0");
 
+#move
+can_ok("Robot", "move");
+my $x_neu = 1;
+my $y_neu = 1;
+my @pos_neu = $Robot->move($x_neu,$y_neu);
+is($pos_neu [0],1, "x-coordinate=1");
+is($pos_neu [1],1, "y-coordinate=1");
  
 can_ok('Robot','links');
 
@@ -44,7 +48,6 @@ $Robot->links_switch();
 is($Robot->links(), "unten", "Test Switch Links2");
 
 can_ok("Robot","rechts_switch");
-is($pos_rechts, 'oben');
 
 my $rechts_switch=$Robot->rechts_switch;
 is($rechts_switch, 'oben');
