@@ -29,11 +29,9 @@ is($pos[1],0, "y-coordinate=0");
  
 can_ok('Robot','links');
 
-ok($Robot->{links} ne undef, "Test Undef");
 
-my$expect=$Robot->{links};
-$Robot->links;
-is($Robot->{links},$expect , "Test Links");
+my$expect="unten";
+is($Robot->links(),$expect , "Test Links");
 
 can_ok('Robot', 'rechts');
 
