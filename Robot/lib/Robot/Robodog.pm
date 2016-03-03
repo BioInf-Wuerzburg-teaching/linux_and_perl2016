@@ -20,5 +20,11 @@ sub move
     $self->SUPER::move($_[0]*2,$_[1]*2);
     return $self->pos();
 }
+=head1 Subroutine, um die Position des Schwanzes des Roboterhundes nach oben zu aendern
+=cut 
+sub wag
+{my $self=shift;
+ $self->{tail}='up';
+}
 
 1;
