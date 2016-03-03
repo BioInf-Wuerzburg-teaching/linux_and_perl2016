@@ -3,4 +3,6 @@ Makefile.PL
 MANIFEST
 README
 t/Robot.t
+t/Robodog.t
 lib/Robot.pm
+lib/Robot/Robodog.pm
