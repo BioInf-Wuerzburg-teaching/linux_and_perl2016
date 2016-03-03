@@ -5,7 +5,7 @@ use Test::More;
 BEGIN{ use_ok('Robot::Robodog') };
 
 
-
+can_ok('Robot::Robodog', 'new');
 
 
 
