@@ -11,13 +11,15 @@ our $VERSION = '0.1';
 
 sub new
 {
+    my $class=shift;
+    $class=ref($class)||$class;
     my $robot={
 	x=>0,
 	y=>0,
 	links=>"unten",
 	rechts=>"unten",    
     };
-    bless $robot, 'Robot';
+    bless $robot, $class;
     return $robot;
 }
 
