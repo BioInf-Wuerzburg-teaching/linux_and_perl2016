@@ -14,5 +14,11 @@ sub new
     return $self;
 }
 
+sub move
+{
+    my $self=shift;
+    $self->SUPER::move($_[0]*2,$_[1]*2);
+    return $self->pos();
+}
 
 1;
