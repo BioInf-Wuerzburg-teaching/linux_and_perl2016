@@ -37,8 +37,8 @@ sub _open{
 sub get_seq{
     my $self=shift;
     my $ID=shift;
-    if(exists $self->{$ID}){
-	return $self->{$ID};    # sequenz noch nicht unter dem key abgelegt
+    if(exists $self->{reads}->{$ID}){
+	return $self->{reads}->{$ID};    # sequenz noch nicht unter dem key abgelegt
     }
     else{
 	return undef;
@@ -68,7 +68,7 @@ sub read{
 	{
 	    $sequence=$sequence.$_;
 	}
-	$self->{$elements[0]} = $sequence;
+	$self->{reads}->{$elements[0]} = $sequence;
 	
 	
     }
@@ -77,7 +77,8 @@ sub read{
 
 sub get_id{
     my $self=shift;
-    return [];
+    my @keys=keys %{$self->{reads}};
+    return \@keys;
 }
 
 # Preloaded methods go here.
