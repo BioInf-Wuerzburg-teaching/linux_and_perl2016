@@ -23,6 +23,7 @@ sub filename{
     my $self=shift;
     if(@_){
 	$self->{file}=shift;
+	$self->_open();
     }
     return $self->{file};
 }
@@ -80,6 +81,7 @@ sub get_id{
     my @keys=keys %{$self->{reads}};
     return \@keys;
 }
+
 
 # Preloaded methods go here.
 
