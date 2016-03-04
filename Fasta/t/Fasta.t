@@ -27,6 +27,10 @@ my $fh=$fasta->{fh};
 ok(tell($fh)!=-1, "filehandletest");
 
 can_ok('Fasta', 'read');
+$fasta->read();
+
+can_ok('Fasta', 'get_seq');
+#is(fasta->get_seq)
 
 done_testing();
 
