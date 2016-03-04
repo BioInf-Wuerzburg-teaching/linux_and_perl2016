@@ -34,6 +34,8 @@ sub _open{
     $self->{fh}=$fh;
 }
 
+sub read{}
+
 # Preloaded methods go here.
 
 1;
