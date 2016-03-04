@@ -34,7 +34,16 @@ sub _open{
     $self->{fh}=$fh;
 }
 
-sub get_seq{}
+sub get_seq{
+    my $self=shift;
+    my $ID=shift;
+    if(exists $self->{$ID}){
+	return $self->{$ID};    # sequenz noch nicht unter dem key abgelegt
+    }
+    else{
+	return undef;
+    }
+}
 
 sub read{}
 
