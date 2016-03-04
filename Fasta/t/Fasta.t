@@ -21,6 +21,8 @@ my $file="fasta.fas";
 $fasta->filename($file);
 is($fasta->{file}, $file, "filenametest");
 
+can_ok('Fasta', '_open');
+
 done_testing();
 
 
