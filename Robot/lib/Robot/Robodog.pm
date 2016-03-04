@@ -22,7 +22,8 @@ sub new
     my $class=shift;
     $class=ref($class)||$class;
     my $self=$class->SUPER::new();
-    $self->{tail}='low';
+    $self->{tail}='';
+    $self->_switch('tail');
     return $self;
 }
 =head1 move()
@@ -54,8 +55,9 @@ Hebt die Rute an.
 =cut 
 
 sub wag
-{my $self=shift;
- $self->{tail}='up';
+{
+    my $self=shift;
+    $self->_switch('tail');
 }
 =head1 AUTOR
 
