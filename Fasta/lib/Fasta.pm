@@ -75,6 +75,8 @@ sub read{
 
 }
 
+sub id_check{}
+
 # Preloaded methods go here.
 
 1;
