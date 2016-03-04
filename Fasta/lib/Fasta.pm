@@ -10,7 +10,13 @@ our $VERSION = '0.1';
 
 
 
-sub new{}
+sub new{
+    my $class=shift;
+    my $self={file=>'',};
+    $class=ref($class)||$class;
+    bless $self, $class;
+    return $self;
+}
 
 
 
