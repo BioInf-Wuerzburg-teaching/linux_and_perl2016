@@ -34,6 +34,8 @@ sub _open{
     $self->{fh}=$fh;
 }
 
+sub get_seq{}
+
 sub read{}
 
 # Preloaded methods go here.
