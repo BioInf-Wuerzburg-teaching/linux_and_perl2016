@@ -21,11 +21,11 @@ is($pos_neu [1],2, "y-coordinate=2");
 
 can_ok('Robot::Robodog', 'show_tail');
 
-is($Robodog->show_tail(), 'low');
+is($Robodog->show_tail(), 'unten');
 
 can_ok('Robot::Robodog', 'wag');
 
 $Robodog->wag();
-is($Robodog->show_tail(), 'up');
+is($Robodog->show_tail(), 'oben');
 
 done_testing();
