@@ -21,11 +21,18 @@ sub new{
 
 sub filename{
     my $self=shift;
-    $self->{file}=shift;
+    if(@_){
+	$self->{file}=shift;
+    }
+    return $self->{file};
 }
 
 
-sub open{}
+sub _open{
+    my $self=shift;
+    my $fh=shift;
+    open($fh, $self->{file}) or die "$!";
+}
 
 # Preloaded methods go here.
 
