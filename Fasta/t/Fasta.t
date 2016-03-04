@@ -12,11 +12,12 @@ use Test::More;
 BEGIN { use_ok('Fasta') };
 
 
-
+can_ok('Fasta', 'new');
 
 
 
 done_testing();
+
 
 #########################
 
