@@ -13,8 +13,7 @@ BEGIN { use_ok('Fasta') };
 
 
 can_ok('Fasta', 'new');
-
-
+my $fasta=new_ok('Fasta');
 
 done_testing();
 
