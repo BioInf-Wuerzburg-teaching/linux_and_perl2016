@@ -31,7 +31,7 @@ $fasta->read();
 
 can_ok('Fasta', 'get_seq');
 is($fasta->get_seq(''), undef, "idtestfail");
-is($fasta->get_seq("ID1"),"AAAA", "idtest");
+is($fasta->get_seq(">ID1"),"AAAA", "idtest");
 
 done_testing();
 
