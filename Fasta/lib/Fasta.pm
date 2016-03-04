@@ -19,6 +19,8 @@ sub new{
 }
 
 
+sub filename{}
+
 
 # Preloaded methods go here.
 
