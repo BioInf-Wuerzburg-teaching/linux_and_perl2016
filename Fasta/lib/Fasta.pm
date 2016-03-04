@@ -19,7 +19,10 @@ sub new{
 }
 
 
-sub filename{}
+sub filename{
+    my $self=shift;
+    $self->{file}=shift;
+}
 
 
 # Preloaded methods go here.
