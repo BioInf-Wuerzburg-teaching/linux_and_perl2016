@@ -15,7 +15,11 @@ BEGIN { use_ok('Fasta') };
 can_ok('Fasta', 'new');
 my $fasta=new_ok('Fasta');
 
+
 can_ok('Fasta', 'filename');
+my $file="fasta.fas";
+$fasta->filename($file);
+is($fasta->{file}, $file, "filenametest");
 
 done_testing();
 
