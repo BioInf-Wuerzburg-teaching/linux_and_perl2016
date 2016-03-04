@@ -45,7 +45,35 @@ sub get_seq{
     }
 }
 
-sub read{}
+sub read{
+    my $self=shift;
+    my $sequence;
+    my $id;
+    my @elements;
+    my %fasta;
+    my $fh=$self->{fh};
+    while(<$fh>)
+    {
+	chomp;
+	my $zeile =$_;
+    
+	if($zeile=~/>/)
+	{
+	    @elements=split(/ /,$zeile);
+	    
+	    $sequence="";
+	    
+	}
+	else
+	{
+	    $sequence=$sequence.$_;
+	}
+	$self->{$elements[0]} = $sequence;
+	
+	
+    }
+
+}
 
 # Preloaded methods go here.
 
