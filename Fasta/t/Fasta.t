@@ -22,6 +22,7 @@ $fasta->filename($file);
 is($fasta->{file}, $file, "filenametest");
 
 can_ok('Fasta', '_open');
+is($fasta->{fh}, IN, "filehandletest");
 
 done_testing();
 
