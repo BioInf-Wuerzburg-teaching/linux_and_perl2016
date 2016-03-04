@@ -38,6 +38,13 @@ sub move
     $self->SUPER::move($_[0]*2,$_[1]*2);
     return $self->pos();
 }
+
+sub show_tail
+{
+    my $self=shift;
+    return $self->{tail};
+}
+
 =head1 wag() 
 
 Subroutine, um die Position des Schwanzes des Roboterhundes nach oben zu aendern
@@ -45,6 +52,7 @@ Subroutine, um die Position des Schwanzes des Roboterhundes nach oben zu aendern
 Hebt die Rute an.
 
 =cut 
+
 sub wag
 {my $self=shift;
  $self->{tail}='up';
