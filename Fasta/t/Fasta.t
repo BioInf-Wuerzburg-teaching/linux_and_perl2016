@@ -26,6 +26,8 @@ $fasta->_open();
 my $fh=$fasta->{fh};
 ok(tell($fh)!=-1, "filehandletest");
 
+can_ok('Fasta', 'read');
+
 done_testing();
 
 
