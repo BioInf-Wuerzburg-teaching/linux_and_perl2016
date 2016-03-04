@@ -26,10 +26,12 @@ sub new
     my $robot={
 	x=>0,
 	y=>0,
-	links=>"unten",
-	rechts=>"unten",    
+	links=>"",
+	rechts=>"",    
     };
     bless $robot, $class;
+    $robot->_switch('links');
+    $robot->_switch('rechts');
     return $robot;
 }
 =head1 move()
@@ -81,22 +83,30 @@ sub rechts
     my $pos_rechts=$robot->{'rechts'};
     return $pos_rechts;
 }
+
+sub _switch
+{ 
+    my $self=shift;
+    my $part=shift;
+    if($self->{$part} eq "unten")
+    {
+	$self->{$part}="oben";
+    }
+    else
+    {
+	$self->{$part}="unten";
+    }
+}
 =head1 links_switch()
 
 Diese Subroutine laesst den Roboter die Position seines linken Armes wechseln.
     $robot->links_switch();
 
 =cut
-sub links_switch{
+sub links_switch
+{
     my $self=shift;
-    if($self->{links} eq "unten")
-    {
-	$self->{links}="oben";
-    }
-    else
-    {
-	$self->{links}="unten";
-    }
+    $self->_switch('links');
 }
 =head1 rechts_switch()
 
@@ -106,9 +116,8 @@ Diese Subroutine  laesst den Roboter seinen rechten Arm nach oben nehmen.
 =cut
 sub rechts_switch
 {
-    my $robot=$_[0];
-    $robot->{'rechts'} ='oben';
-    return $robot->rechts();
+    my $self=shift;
+    $self->_switch('rechts');
 }
 =head1 AUTOR
 
