@@ -25,6 +25,8 @@ sub filename{
 }
 
 
+sub open{}
+
 # Preloaded methods go here.
 
 1;
