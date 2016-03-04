@@ -33,6 +33,8 @@ can_ok('Fasta', 'get_seq');
 is($fasta->get_seq(''), undef, "idtestfail");
 is($fasta->get_seq(">ID1"),"AAAA", "idtest");
 
+can_ok('Fasta', 'id_check');
+
 done_testing();
 
 
