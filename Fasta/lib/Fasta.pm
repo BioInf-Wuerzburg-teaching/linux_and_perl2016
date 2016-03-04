@@ -75,7 +75,10 @@ sub read{
 
 }
 
-sub get_id{}
+sub get_id{
+    my $self=shift;
+    return [];
+}
 
 # Preloaded methods go here.
 
