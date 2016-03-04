@@ -17,13 +17,14 @@ my $fasta=new_ok('Fasta');
 
 
 can_ok('Fasta', 'filename');
-my $file="fasta.fas";
+my $file="t/fasta.fas";
 is($fasta->filename($file), $file, "filenametest");
 is($fasta->filename(), $file, "two");
 
 can_ok('Fasta', '_open');
-#$fasta->_open("IN");
-#is($fasta->{fh}, IN, "filehandletest");
+$fasta->_open();
+my $fh=$fasta->{fh};
+ok(tell($fh)!=-1, "filehandletest");
 
 done_testing();
 
