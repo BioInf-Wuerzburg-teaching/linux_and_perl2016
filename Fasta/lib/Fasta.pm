@@ -75,7 +75,7 @@ sub read{
 
 }
 
-sub id_check{}
+sub get_id{}
 
 # Preloaded methods go here.
 
