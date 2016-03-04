@@ -30,8 +30,8 @@ sub filename{
 
 sub _open{
     my $self=shift;
-    my $fh=shift;
-    open($fh, $self->{file}) or die "$!";
+    open(my $fh, $self->filename()) or die "$!";
+    $self->{fh}=$fh;
 }
 
 # Preloaded methods go here.
