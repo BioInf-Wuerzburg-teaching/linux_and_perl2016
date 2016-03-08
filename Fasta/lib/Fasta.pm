@@ -82,6 +82,40 @@ sub get_id{
     return \@keys;
 }
 
+sub count_bases{
+    my $self=shift;
+    my $fh=$self->{fh};
+    while(<$fh>)
+    {
+	my $zeile =$_;
+	my @zeile = split('', $zeile);
+	my $count_of_A = 0;
+	my $count_of_C = 0;
+	my $count_of_G = 0;
+	my $count_of_T = 0;
+
+	foreach my $base (@zeile){
+	    if ($base eq 'A'){
+		++$count_of_A;
+	    } elsif($base eq 'C'){
+		++$count_of_C;
+	    } elsif($base eq 'G'){
+		++$count_of_G;
+	    } elsif($base eq 'T'){
+		++$count_of_T;
+	    }
+	}
+
+	my @base_counts;
+	$base_counts[0] = "$count_of_A ";
+	$base_counts[1] = "$count_of_C ";
+	$base_counts[2] = "$count_of_G ";
+	$base_counts[3] = "$count_of_T ";
+	return @base_counts;
+ 
+    }
+}
+   
 
 # Preloaded methods go here.
 
