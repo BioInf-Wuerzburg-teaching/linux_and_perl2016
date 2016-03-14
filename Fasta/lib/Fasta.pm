@@ -126,6 +126,19 @@ sub dna2rna{
 	return $zeile;
     }
 }
+
+sub reverse_complement{
+    my $self=shift;
+    my $fh=$self->{fh};
+    while(<$fh>)
+    {
+	my $zeile =$_;
+	my $reverse_zeile = reverse $zeile;
+	$reverse_zeile =~ tr/ACGT/TGCA/;
+	return $reverse_zeile
+    }
+}
+    
 # Preloaded methods go here.
 
 1;
