@@ -40,6 +40,7 @@ is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 can_ok('Fasta', 'count_bases');
 is($fasta->count_bases(),"212 206 225 231","base count test");
 
+can_ok('Fasta', 'dna2rna');
 done_testing();
 
 
