@@ -116,7 +116,16 @@ sub count_bases{
     }
 }
    
-
+sub dna2rna{
+    my $self=shift;
+    my $fh=$self->{fh};
+    while(<$fh>)
+    {
+	my $zeile =$_;
+	$zeile =~ tr/T/U/;
+	return $zeile;
+    }
+}
 # Preloaded methods go here.
 
 1;
