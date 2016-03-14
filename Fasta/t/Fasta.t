@@ -41,6 +41,9 @@ can_ok('Fasta', 'count_bases');
 is($fasta->count_bases(),"212 206 225 231","base count test");
 
 can_ok('Fasta', 'dna2rna');
+
+can_ok('Fasta', 'reverse_complement');
+
 done_testing();
 
 
