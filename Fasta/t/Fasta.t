@@ -46,6 +46,8 @@ can_ok('Fasta', 'reverse_complement');
 
 can_ok('Fasta', 'put_zeile_into_array');
 
+can_ok('Fasta', 'find_motif2');
+
 done_testing();
 
 
