@@ -138,6 +138,62 @@ sub reverse_complement{
 	return $reverse_zeile
     }
 }
+
+sub put_zeile_into_array{
+     my $self=shift;
+     my $fh=$self->{fh};
+     my @beidezeilen;
+     while(<$fh>)
+     {
+	 my $zeile =$_;
+	 push @beidezeilen, "$zeile";
+     }
+     #return @beidezeilen;
+     my $string1 = $beidezeilen[0];
+     my $string2 = $beidezeilen[1];
+
+     my $num_mismatch = 0;
+     my $len = length($string1);
+     for (my $i=0; $i<$len; $i++){
+	 ++$num_mismatch if substr($string1, $i, 1) ne substr($string2, $i, 1);
+     }
+     return $num_mismatch;
+}
+
+
+
+sub find_motif2{
+    my $self=shift;
+    my $fh=$self->{fh};
+    my @beidezeilen;
+    while(<$fh>)
+    {
+	chomp;
+	my $zeile =$_;
+	push @beidezeilen, "$zeile";
+    }
+    
+    my $sequence = $beidezeilen[0];
+    my $motif = $beidezeilen[1];
+    $sequence=~s/\n//g;
+    $motif=~s/\n//g;
+    my @result = ();
+    my $offset = 0;
+    my $result = index($sequence, $motif, $offset);
+    while ($result != -1){
+	my $result_plus_one = $result + 1;
+	print "$result_plus_one ";
+	$offset = $result + 1;
+        $result = index($sequence, $motif, $offset);
+        
+    }
+}
+
+
+
+    
+
+
     
 # Preloaded methods go here.
 
