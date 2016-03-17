@@ -82,7 +82,18 @@ sub get_id{
     return \@keys;
 }
 
-sub count_base{};
+sub count_base{
+    my $self=shift;
+    my $ID=shift;
+    my $seq = $self->get_seq($ID);
+    my $countA = ($seq =~ tr/A//);
+    my $countC = ($seq =~ tr/C//);
+    my $countG = ($seq =~ tr/G//);
+    my $countT = ($seq =~ tr/T//);
+
+    my $counts = [$countA, $countC, $countG, $countT,];
+    return $counts;
+};
 
 # Preloaded methods go here.
 
