@@ -38,6 +38,18 @@ my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
 can_ok('Fasta', 'count_base');
+my $file_Rosalind="t/fasta_Rosalind.fa";
+my $fasta_Rosalind=new_ok('Fasta');
+$fasta_Rosalind->filename($file_Rosalind);
+$fasta_Rosalind->read();
+my $counts = $fasta_Rosalind->count_base(">count_test");
+my $realcounts=[20, 12, 17, 21];
+is_deeply($counts, $realcounts, "correct counts");
+
+
+
+
+
 
 done_testing();
 
