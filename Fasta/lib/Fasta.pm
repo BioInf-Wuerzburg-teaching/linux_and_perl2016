@@ -94,7 +94,13 @@ sub count_base{
     return $counts;
 };
 
-sub transcribe{};
+sub transcribe{
+    my $self = shift;
+    my $ID = shift;
+    my $seq = $self->get_seq($ID);
+    $seq =~ s/T/U/g;
+    return $seq;
+};
 
 # Preloaded methods go here.
 
