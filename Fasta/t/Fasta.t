@@ -49,6 +49,7 @@ is_deeply($counts, $realcounts, "correct counts");
 
 
 can_ok("Fasta", "transcribe");
+is($fasta_Rosalind->transcribe(">transcribe_test"), "GAUGGAACUUGACUACGUAAAUU", "transcribe Test");
 
 
 
