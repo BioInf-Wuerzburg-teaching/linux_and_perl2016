@@ -82,6 +82,7 @@ sub get_id{
     return \@keys;
 }
 
+sub count_base{};
 
 # Preloaded methods go here.
 
