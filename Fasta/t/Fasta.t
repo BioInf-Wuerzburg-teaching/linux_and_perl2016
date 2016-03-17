@@ -37,6 +37,8 @@ can_ok('Fasta', 'get_id');
 my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
+can_ok('Fasta', 'count_base');
+
 done_testing();
 
 
