@@ -1,5 +1,4 @@
 package Fasta;
-
 use 5.010001;
 use strict;
 use warnings;
@@ -94,6 +93,8 @@ sub count_base{
     my $counts = [$countA, $countC, $countG, $countT,];
     return $counts;
 };
+
+sub transcribe{};
 
 # Preloaded methods go here.
 
