@@ -102,7 +102,15 @@ sub transcribe{
     return $seq;
 };
 
-sub rev_comp{};
+sub rev_comp{
+    my $self = shift;
+    my $ID = shift;
+    my $seq =$self->get_seq($ID);
+    $seq =~ tr/ATGC/TACG/;
+    $seq = reverse $seq;
+    return $seq;
+   
+};
 
 # Preloaded methods go here.
 
