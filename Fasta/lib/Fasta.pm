@@ -112,6 +112,8 @@ sub rev_comp{
    
 };
 
+sub GC_cont {};
+
 # Preloaded methods go here.
 
 1;
