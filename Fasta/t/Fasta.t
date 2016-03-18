@@ -52,6 +52,7 @@ can_ok("Fasta", "transcribe");
 is($fasta_Rosalind->transcribe(">transcribe_test"), "GAUGGAACUUGACUACGUAAAUU", "transcribe Test");
 
 can_ok("Fasta", "rev_comp");
+is($fasta_Rosalind->rev_comp(">reverse_test"),"ACCGGGTTTT", "reverse complement Test");
 
 
 
