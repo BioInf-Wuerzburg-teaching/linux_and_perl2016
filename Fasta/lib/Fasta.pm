@@ -102,6 +102,8 @@ sub transcribe{
     return $seq;
 };
 
+sub rev_comp{};
+
 # Preloaded methods go here.
 
 1;
