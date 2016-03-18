@@ -49,15 +49,13 @@ is_deeply($counts, $realcounts, "correct counts");
 
 
 can_ok("Fasta", "transcribe");
-is($fasta_Rosalind->transcribe(">transcribe_test"), "GAUGGAACUUGACUACGUAAAUU", "transcribe Test");
+is($fasta_Rosalind->transcribe(">transcribe_test"), "GAUGGAACUUGACUACGUAAAUUUUUUUUUUUUUUUUUUUUUU", "transcribe Test");
 
 can_ok("Fasta", "rev_comp");
 is($fasta_Rosalind->rev_comp(">reverse_test"),"ACCGGGTTTT", "reverse complement Test");
 
 can_ok("Fasta", "GC_cont");
-
-
-
+is_deeply($fasta_Rosalind->GC_cont(),[">Rosalind_0808", "60.919540"], "Test for GC content");
 
 done_testing();
 
