@@ -112,7 +112,33 @@ sub rev_comp{
    
 };
 
-sub GC_cont {};
+sub GC_cont {
+    my $self = shift;
+    my $IDs = $self->get_id();
+    my @IDsarr = @{$IDs};
+    my $anz = $#IDsarr;
+    my %GC_counts;
+    for(my $i=0; $i<=$anz; $i++){
+	my $counts = $self->count_base($IDsarr[$i]);
+	my $GC = $counts->[1] + $counts->[2]; # G and C in Array
+	my $all = $counts->[0] + $counts->[1] + $counts->[2] + $counts->[3];
+	my $cont = ($GC/$all)*100;
+	$GC_counts{$cont} = $IDsarr[$i];
+	
+    }
+   
+    keys %GC_counts;
+    my ($largest_key, $largest_val) = each %GC_counts;
+    while (my ($key, $val) = each %GC_counts){
+	if ($key > $largest_key){
+	    $largest_val = $val;
+	    $largest_key = $key;
+	}
+    }
+    my $rounded = sprintf("%.6f", $largest_key);
+    return [$GC_counts{$largest_key}, $rounded];
+    
+};
 
 # Preloaded methods go here.
 
