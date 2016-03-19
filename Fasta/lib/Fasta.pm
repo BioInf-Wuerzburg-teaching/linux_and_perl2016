@@ -88,7 +88,7 @@ sub count_base{
     my $countA = ($seq =~ tr/A//);
     my $countC = ($seq =~ tr/C//);
     my $countG = ($seq =~ tr/G//);
-    my $countT = ($seq =~ tr/T//);
+    my $countT = ($seq =~ tr/TU//);
 
     my $counts = [$countA, $countC, $countG, $countT,];
     return $counts;
@@ -140,7 +140,9 @@ sub GC_cont {
     
 };
 
-sub translate{};
+sub translate{
+
+};
 
 # Preloaded methods go here.
 
