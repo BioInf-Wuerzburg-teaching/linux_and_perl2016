@@ -140,6 +140,8 @@ sub GC_cont {
     
 };
 
+sub translate{};
+
 # Preloaded methods go here.
 
 1;
