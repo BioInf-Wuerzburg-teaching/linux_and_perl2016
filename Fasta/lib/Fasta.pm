@@ -141,7 +141,34 @@ sub GC_cont {
 };
 
 sub translate{
-
+    my $self = shift;
+    my $ID = shift;
+    my $seq = $self->get_seq($ID);
+    my %codons = (
+	"GGA" => "G", "GGG" => "G", "GGC" => "G", "GGU" => "G",
+	"GCA" => "A", "GCC" => "A", "GCG" => "A", "GCU" => "A",
+	"GUA" => "V", "GUC" => "V", "GUG" => "V", "GUU" => "V",
+	"CCA" => "P", "CCC" => "P", "CCG" => "P", "CCU" => "P",
+	"UCA" => "S", "UCC" => "S", "UCG" => "S", "UCU" => "S",
+	"CUA" => "L", "CUC" => "L", "CUG" => "L", "CUU" => "L",
+	"CGA" => "R", "CGC" => "R", "CGG" => "R", "CGU" => "R",
+	"ACA" => "T", "ACC" => "T", "ACG" => "T", "ACU" => "T",
+	"AUA" => "I", "AUC" => "I", "AUU" => "I", "AUG" => "M",
+	"UAA" => "|", "UAG" => "|", "UGA" => "|", "CAU" => "H",
+	"AAA" => "K", "AAG" => "K", "UAC" => "Y", "UAU" => "Y",
+	"AGC" => "S", "AGU" => "S", "UGC" => "C", "UGU" => "C",
+	"UUA" => "L", "UUG" => "L", "CAA" => "Q", "CAG" => "Q",
+	"AGA" => "R", "AGG" => "R", "AAC" => "N", "AAU" => "N",
+	"UUC" => "F", "UUU" => "F", "GAC" => "D", "GAU" => "D",
+	"GAA" => "E", "GAG" => "E", "UGG" => "W", "CAC" => "H",
+	);
+    
+    my $prot ="";
+    for(my $i=0; $i<length($seq)-2; $i+=3){
+	my $trip = substr($seq,$i,3);
+	$prot .= $codons{$trip};
+    }
+    return $prot;
 };
 
 # Preloaded methods go here.
