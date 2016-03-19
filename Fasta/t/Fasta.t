@@ -58,6 +58,8 @@ can_ok("Fasta", "GC_cont");
 is_deeply($fasta_Rosalind->GC_cont(),[">Rosalind_0808", "60.919540"], "Test for GC content");
 
 can_ok("Fasta", "translate");
+is($fasta_Rosalind->translate(">translate_test"),"MAMAPRTEINSTRING|", "translate test");
+
 
 done_testing();
 
