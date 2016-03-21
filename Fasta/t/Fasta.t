@@ -44,6 +44,9 @@ is_deeply($fasta->basecount(">ID1"), $exphash, "correst counthash");
 
 can_ok('Fasta', 'get_counts');
 
+
+can_ok('Fasta', 'translate');
+
 done_testing();
 
 
