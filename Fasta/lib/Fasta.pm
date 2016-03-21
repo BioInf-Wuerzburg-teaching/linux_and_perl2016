@@ -99,7 +99,17 @@ sub basecount{
 }
 
 sub get_counts{
-
+    my $self=shift;
+    my $ID=shift;
+    my $hash=$self->basecount($ID);
+    my %hash=%{$hash};
+    foreach my $key(sort keys%hash){
+	print "$key ";
+    }
+    print "\n";
+    foreach my $key (sort keys%hash){
+	print "$hash{$key} ";
+    }
 }
 
 # Preloaded methods go here.
