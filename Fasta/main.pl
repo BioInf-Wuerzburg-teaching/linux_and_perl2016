@@ -9,8 +9,9 @@ my $parser= Fasta->new();
 
 $parser->filename($file);
 $parser->read();
-foreach my$ID (@{$parser->get_id()}){
-	print $ID, "\n", $parser->get_seq($ID), "\n";
-}
+#foreach my$ID (@{$parser->get_id()}){
+#	print $ID, "\n", $parser->get_seq($ID), "\n";
+#}
 
-$parser->get_counts(">ID1");
+print $parser->translate('>ID1');
+print "\n";
