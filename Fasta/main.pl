@@ -12,3 +12,5 @@ $parser->read();
 foreach my$ID (@{$parser->get_id()}){
 	print $ID, "\n", $parser->get_seq($ID), "\n";
 }
+
+$parser->get_counts(">ID1");
