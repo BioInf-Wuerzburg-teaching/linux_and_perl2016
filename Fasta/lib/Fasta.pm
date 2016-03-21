@@ -83,7 +83,19 @@ sub get_id{
 }
 
 sub basecount{
-    
+    my $self=shift;
+    my $ID=shift;
+    my %bases;
+    my $seq=$self->get_seq($ID);
+    my $A= $seq=~ tr/'A'/'A'/;
+    my $C= $seq=~ tr/'C'/'C'/;
+    my $T= $seq=~ tr/'T'/'T'/;
+    my $G= $seq=~ tr/'G'/'G'/;
+    $bases{A}=$A;
+    $bases{C}=$C;
+    $bases{T}=$T;
+    $bases{G}=$G;
+    return \%bases;
 }
 
 # Preloaded methods go here.
