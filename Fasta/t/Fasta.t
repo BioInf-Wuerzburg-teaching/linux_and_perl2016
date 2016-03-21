@@ -46,6 +46,8 @@ can_ok('Fasta', 'get_counts');
 
 
 can_ok('Fasta', 'translate');
+my $exprna="AAAAUUUCCG";
+is($fasta->translate(">ID1"), $exprna, "translationtest");
 
 done_testing();
 
