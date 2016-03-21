@@ -50,6 +50,8 @@ my $exprna="AAAAUUUCCG";
 is($fasta->translate(">ID1"), $exprna, "translationtest");
 
 can_ok('Fasta', 'reverse_complement');
+my $exprev="CGGAAATTTT";
+is ($fasta->reverse_complement(">ID1"), $exprev, "reversetest");
 
 done_testing();
 
