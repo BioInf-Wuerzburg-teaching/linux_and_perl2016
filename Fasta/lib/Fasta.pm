@@ -124,6 +124,8 @@ sub reverse_complement{
     my $ID=shift;
     my $seq=$self->get_seq($ID);
     $seq= reverse $seq;
+    $seq=~ tr /GCTA/CGAT/;
+    return $seq;
 }
 
 # Preloaded methods go here.
