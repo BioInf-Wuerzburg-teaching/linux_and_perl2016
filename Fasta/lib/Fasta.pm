@@ -113,7 +113,10 @@ sub get_counts{
 }
 
 sub translate{
-
+    my $self=shift;
+    my $ID=shift;
+    my $seq=$self->get_seq($ID);
+    return $seq=~ tr /'T'/'U'/r;
 }
 
 # Preloaded methods go here.
