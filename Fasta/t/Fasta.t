@@ -31,13 +31,14 @@ $fasta->read();
 
 can_ok('Fasta', 'get_seq');
 is($fasta->get_seq(''), undef, "idtestfail");
-is($fasta->get_seq(">ID1"),"AAAA", "idtest");
+is($fasta->get_seq(">ID1"),"AAAATTTCCG", "idtest");
 
 can_ok('Fasta', 'get_id');
 my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
 can_ok('Fasta', 'basecount');
+#is($fasta->basecount(''), undef, "idtest_basecount");
 
 done_testing();
 
