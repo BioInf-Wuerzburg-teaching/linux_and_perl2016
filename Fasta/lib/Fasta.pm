@@ -98,6 +98,10 @@ sub basecount{
     return \%bases;
 }
 
+sub get_counts{
+
+}
+
 # Preloaded methods go here.
 
 1;
