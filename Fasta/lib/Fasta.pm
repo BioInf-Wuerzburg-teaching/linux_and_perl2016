@@ -119,6 +119,10 @@ sub translate{
     return $seq=~ tr /'T'/'U'/r;
 }
 
+sub reverse_complement{
+
+}
+
 # Preloaded methods go here.
 
 1;
