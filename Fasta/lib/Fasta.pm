@@ -120,7 +120,10 @@ sub translate{
 }
 
 sub reverse_complement{
-
+    my $self=shift;
+    my $ID=shift;
+    my $seq=$self->get_seq($ID);
+    $seq= reverse $seq;
 }
 
 # Preloaded methods go here.
