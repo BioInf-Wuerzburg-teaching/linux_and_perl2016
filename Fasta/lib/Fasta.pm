@@ -112,6 +112,10 @@ sub get_counts{
     }
 }
 
+sub translate{
+
+}
+
 # Preloaded methods go here.
 
 1;
