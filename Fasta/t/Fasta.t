@@ -53,6 +53,8 @@ can_ok('Fasta', 'reverse_complement');
 my $exprev="CGGAAATTTT";
 is ($fasta->reverse_complement(">ID1"), $exprev, "reversetest");
 
+can_ok('Fasta', 'rna_translation');
+
 done_testing();
 
 
