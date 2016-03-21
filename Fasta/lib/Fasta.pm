@@ -39,7 +39,7 @@ sub get_seq{
     my $self=shift;
     my $ID=shift;
     if(exists $self->{reads}->{$ID}){
-	return $self->{reads}->{$ID};    # sequenz noch nicht unter dem key abgelegt
+	return $self->{reads}->{$ID};    
     }
     else{
 	return undef;
@@ -82,6 +82,9 @@ sub get_id{
     return \@keys;
 }
 
+sub basecount{
+    
+}
 
 # Preloaded methods go here.
 
