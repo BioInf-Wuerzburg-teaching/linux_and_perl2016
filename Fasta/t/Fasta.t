@@ -49,6 +49,8 @@ can_ok('Fasta', 'translate');
 my $exprna="AAAAUUUCCG";
 is($fasta->translate(">ID1"), $exprna, "translationtest");
 
+can_ok('Fasta', 'reverse_complement');
+
 done_testing();
 
 
