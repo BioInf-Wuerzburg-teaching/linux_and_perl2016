@@ -13,5 +13,8 @@ $parser->read();
 #	print $ID, "\n", $parser->get_seq($ID), "\n";
 #}
 
-print $parser->translate('>ID1');
+#print $parser->translate('>ID1');
+#print "\n";
+
+print $parser->reverse_complement(">ID1");
 print "\n";
