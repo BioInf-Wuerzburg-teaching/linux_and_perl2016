@@ -38,7 +38,10 @@ my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
 can_ok('Fasta', 'basecount');
-
+my %expectedcounts=(A=>4,C=>2,T=>3,G=>1);
+my $exphash= \%expectedcounts;
+is_deeply($fasta->basecount(">ID1"), $exphash, "correst counthash"); 
+#$fasta->basecount(">ID1");
 
 done_testing();
 
