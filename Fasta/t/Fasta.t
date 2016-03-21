@@ -41,7 +41,8 @@ can_ok('Fasta', 'basecount');
 my %expectedcounts=(A=>4,C=>2,T=>3,G=>1);
 my $exphash= \%expectedcounts;
 is_deeply($fasta->basecount(">ID1"), $exphash, "correst counthash"); 
-#$fasta->basecount(">ID1");
+
+can_ok('Fasta', 'get_counts');
 
 done_testing();
 
