@@ -128,6 +128,11 @@ sub reverse_complement{
     return $seq;
 }
 
+sub rna_translation{
+
+}
+
+
 # Preloaded methods go here.
 
 1;
