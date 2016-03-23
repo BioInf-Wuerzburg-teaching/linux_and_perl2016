@@ -138,8 +138,8 @@ sub GC{
 	my $GCsum= $bases{G}+$bases{C};
 	my $allsum= $bases{A}+$bases{T}+$GCsum;
 	my $GC= $GCsum/=$allsum*=100;
-	print $GC;
-	#$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
+	$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
+	print "$contents{$IDs[$index]}";
 	$index++;
 	}
     my @Winner=(0,0);
