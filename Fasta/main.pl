@@ -3,7 +3,7 @@ use warnings;
 use lib "./lib/";
 use Fasta;
 
-my $file= "t/fasta.fas";
+my $file= "t/Experiment.fas";
 
 my $parser= Fasta->new();
 
@@ -21,4 +21,4 @@ $parser->read();
 
 
 my @highGC=@{$parser->GC};
-print "@highGC";
+print "@highGC \n";
