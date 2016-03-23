@@ -20,4 +20,5 @@ $parser->read();
 #print "\n";
 
 
-$parser->GC;
+my @highGC=@{$parser->GC};
+print "@highGC";
