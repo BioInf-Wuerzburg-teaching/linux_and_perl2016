@@ -135,6 +135,8 @@ sub GC{
     my %contents;                               # hash wird in while schleife mit IDs als key und GC-Content als value befüllt
     while($index<@IDs){                         # läuft bis alle IDs berechnet und abgelegt wurden
 	my %bases=%{$self->basecount($IDs[$index])};# zieht die basecounts der aktuellen ID in ein hash
+	my $GCsum= $bases{G}+$bases{C};
+	print $GCsum;
 	#$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
 	$index++;
 	}
