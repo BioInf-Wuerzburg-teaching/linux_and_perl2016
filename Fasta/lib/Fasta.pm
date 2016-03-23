@@ -128,6 +128,12 @@ sub reverse_complement{
     return $seq;
 }
 
+sub GC{
+
+}
+
+
+
 sub rna_translation{
 
 }
