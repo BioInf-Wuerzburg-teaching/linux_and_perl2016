@@ -16,5 +16,8 @@ $parser->read();
 #print $parser->translate('>ID1');
 #print "\n";
 
-print $parser->reverse_complement(">ID1");
-print "\n";
+#print $parser->reverse_complement(">ID1");
+#print "\n";
+
+
+$parser->GC;
