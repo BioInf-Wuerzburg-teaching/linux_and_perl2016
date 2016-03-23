@@ -135,7 +135,7 @@ sub GC{
     my %contents;                               # hash wird in while schleife mit IDs als key und GC-Content als value befüllt
     while($index<@IDs){                         # läuft bis alle IDs berechnet und abgelegt wurden
 	my %bases=%{$self->basecount($IDs[$index])};# zieht die basecounts der aktuellen ID in ein hash
-	my $GCsum= $bases{G}+$bases{C};
+       	my $GCsum= $bases{G}+$bases{C};
 	my $allsum= $bases{A}+$bases{T}+$GCsum;
 	my $GC= $GCsum/=$allsum;
 	$GC*=100;
@@ -143,12 +143,12 @@ sub GC{
 	$index++;
 	}
     my @Winner=(0,0);                           # in diesem array sollen ID und Content der "Winner"-ID abgelegt werden
-    my $high=0;                                 # speichert den momentan höchsten GC-value
+    my $high=1;                          # speichert den momentan höchsten GC-value
     foreach my $key (keys%contents){
-	if($contents{$key}>$high){            # vergleicht ob der GC-value des aktuellen Keys höher ist als der momentan Höchste
+	if ($contents{$key} > $high){            # vergleicht ob der GC-value des aktuellen Keys höher ist als der momentan Höchste
 	    @Winner[0]=$key;
 	    @Winner[1]=$contents{$key};
-	    $high=$contents{key};
+	    $high=$contents{$key};
 	}
     }
     return \@Winner;
