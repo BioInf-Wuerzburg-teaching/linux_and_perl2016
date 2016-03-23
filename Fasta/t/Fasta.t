@@ -54,7 +54,8 @@ my $exprev="CCCGGAAATTTT";
 is ($fasta->reverse_complement(">ID1"), $exprev, "reversetest");
 
 can_ok('Fasta', 'GC');
-
+my $exparr=[">ID1","41,7"];
+is_deeply($fasta->GC(), $exparr, "correct list");
 
 can_ok('Fasta', 'rna_translation');
 
