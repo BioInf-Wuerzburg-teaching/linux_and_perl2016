@@ -161,272 +161,212 @@ sub rna_translation{
     my $ID=shift;
     my $rnaseq= $self->translate($ID);
     my @rnaseq= $rnaseq =~ /.../sg;
-    print "@rnaseq \n";
     my $index=0;
     while($index<@rnaseq){
 	if ($rnaseq[$index] eq 'UUU'){
 	    $rnaseq[$index]="F";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UUC'){
 	    $rnaseq[$index]="F";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UUA'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UUG'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UCU'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UCC'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UCA'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UCG'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UAU'){
 	    $rnaseq[$index]="Y";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UAC'){
 	    $rnaseq[$index]="Y";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UAA'){
 	    $rnaseq[$index]="stop";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UAG'){
 	    $rnaseq[$index]="stop";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UGU'){
 	    $rnaseq[$index]="C";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UGC'){
 	    $rnaseq[$index]="C";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UGA'){
 	    $rnaseq[$index]="stop";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'UGG'){
 	    $rnaseq[$index]="W";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CUU'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CUC'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CUA'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CUG'){
 	    $rnaseq[$index]="L";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CCU'){
 	    $rnaseq[$index]="P";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CCC'){
 	    $rnaseq[$index]="P";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CCA'){
 	    $rnaseq[$index]="P";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CCG'){
 	    $rnaseq[$index]="P";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CAU'){
 	    $rnaseq[$index]="H";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CAC'){
 	    $rnaseq[$index]="H";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CAA'){
 	    $rnaseq[$index]="Q";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CAG'){
 	    $rnaseq[$index]="Q";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CGU'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CGC'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CGA'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'CGG'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AUU'){
 	    $rnaseq[$index]="I";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AUC'){
 	    $rnaseq[$index]="I";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AUA'){
 	    $rnaseq[$index]="I";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AUG'){
 	    $rnaseq[$index]="M";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'ACU'){
 	    $rnaseq[$index]="T";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'ACC'){
 	    $rnaseq[$index]="T";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'ACA'){
 	    $rnaseq[$index]="T";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'ACG'){
 	    $rnaseq[$index]="T";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AAU'){
 	    $rnaseq[$index]="N";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AAC'){
 	    $rnaseq[$index]="N";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AAA'){
 	    $rnaseq[$index]="K";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AAG'){
 	    $rnaseq[$index]="K";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AGU'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AGC'){
 	    $rnaseq[$index]="S";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AGA'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'AGG'){
 	    $rnaseq[$index]="R";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GUU'){
 	    $rnaseq[$index]="V";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GUC'){
 	    $rnaseq[$index]="V";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GUA'){
 	    $rnaseq[$index]="V";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GUG'){
 	    $rnaseq[$index]="V";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GCU'){
 	    $rnaseq[$index]="A";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GCC'){
 	    $rnaseq[$index]="A";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GCA'){
 	    $rnaseq[$index]="A";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GCG'){
 	    $rnaseq[$index]="A";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GAU'){
 	    $rnaseq[$index]="D";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GAC'){
 	    $rnaseq[$index]="D";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GAA'){
 	    $rnaseq[$index]="E";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GAG'){
 	    $rnaseq[$index]="E";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GGU'){
 	    $rnaseq[$index]="G";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GGC'){
 	    $rnaseq[$index]="G";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GGA'){
 	    $rnaseq[$index]="G";
-	    print "$rnaseq[$index]";
 	}
 	elsif ($rnaseq[$index] eq 'GGG'){
 	    $rnaseq[$index]="G";
-	    print "$rnaseq[$index]";
 	}
 	else{
 	    print "String fehlehrhaft oder zu Ende";
 	}
 	$index++;
     }
-    #my$proteinseq=$rnaseq;
-    #return $proteinseq;
+    $index=0;
+    my $proteinseq="";
+    while($index<@rnaseq){
+	$proteinseq=$proteinseq.$rnaseq[$index];
+	$index++;
+    }
+    return $proteinseq;
 }
 
 
