@@ -58,6 +58,8 @@ my $exparr=[">ID1","41.6666666666667"];
 is_deeply($fasta->GC(), $exparr, "correct list");
 
 can_ok('Fasta', 'rna_translation');
+my $proseq="KISG";
+is($fasta->rna_translation(">ID1"),$proseq, "Proteinsequenz");
 
 done_testing();
 
