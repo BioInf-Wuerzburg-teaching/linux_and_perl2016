@@ -129,6 +129,9 @@ sub reverse_complement{
 }
 
 sub GC{
+    my $self=shift;
+    my @IDs=@{$self->get_id};                   # der return aus get_id wird dereferenziert in @IDs abgelegt
+    print "@IDs";
     my @Winner=(0,0);
     return \@Winner;
 }
