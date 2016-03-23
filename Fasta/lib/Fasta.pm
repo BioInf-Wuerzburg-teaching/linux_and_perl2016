@@ -131,7 +131,13 @@ sub reverse_complement{
 sub GC{
     my $self=shift;
     my @IDs=@{$self->get_id};                   # der return aus get_id wird dereferenziert in @IDs abgelegt
-    print "@IDs";
+    my $index=0;
+    my %contents;                               # hash wird in while schleife mit IDs als key und GC-Content als value befüllt
+    while($index<@IDs){                         # läuft bis alle IDs berechnet und abgelegt wurden
+	my %bases=%{$self->basecount($IDs[$index])};# zieht die basecounts der aktuellen ID in ein hash
+	#$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
+	$index++;
+	}
     my @Winner=(0,0);
     return \@Winner;
 }
