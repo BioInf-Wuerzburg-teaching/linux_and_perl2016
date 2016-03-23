@@ -20,8 +20,8 @@ $parser->read();
 #print "\n";
 
 
-#my @highGC=@{$parser->GC};
-#print "$highGC[0] \n $highGC[1] \n";
+my @highGC=@{$parser->GC};
+print "$highGC[0] \n $highGC[1] \n";
 
-my $proseq=$parser->rna_translation(">ID1");
-print "$proseq \n"
+#my $proseq=$parser->rna_translation(">ID1");
+#print "$proseq \n"
