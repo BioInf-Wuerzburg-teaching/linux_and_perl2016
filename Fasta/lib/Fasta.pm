@@ -129,7 +129,8 @@ sub reverse_complement{
 }
 
 sub GC{
-
+    my @Winner=(0,0);
+    return \@Winner;
 }
 
 
