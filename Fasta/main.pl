@@ -21,4 +21,4 @@ $parser->read();
 
 
 my @highGC=@{$parser->GC};
-print "@highGC \n";
+print "$highGC[0] \n $highGC[1] \n";
