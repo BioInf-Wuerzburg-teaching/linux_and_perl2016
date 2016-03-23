@@ -139,6 +139,7 @@ sub GC{
 	my $allsum= $bases{A}+$bases{T}+$GCsum;
 	my $GC= $GCsum/=$allsum;
 	$GC*=100;
+	$GC= sprintf("%.6f", $GC);
 	$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
 	$index++;
 	}
