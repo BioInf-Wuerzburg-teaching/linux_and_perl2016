@@ -137,12 +137,15 @@ sub GC{
 	my %bases=%{$self->basecount($IDs[$index])};# zieht die basecounts der aktuellen ID in ein hash
 	my $GCsum= $bases{G}+$bases{C};
 	my $allsum= $bases{A}+$bases{T}+$GCsum;
-	my $GC= $GCsum/=$allsum*=100;
+	my $GC= $GCsum/=$allsum;
+	$GC*=100;
 	$contents{$IDs[$index]}=$GC;            # legt GC-Content mit aktueller ID als key ab
-	print "$contents{$IDs[$index]}";
 	$index++;
 	}
-    my @Winner=(0,0);
+    my @Winner=(0,0);                           # in diesem array sollen ID und Content der "Winner"-ID abgelegt werden
+    #foreach my $key (keys%contents){
+#	if 
+ #   }
     return \@Winner;
 }
 
