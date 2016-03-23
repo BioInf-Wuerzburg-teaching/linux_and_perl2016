@@ -143,9 +143,14 @@ sub GC{
 	$index++;
 	}
     my @Winner=(0,0);                           # in diesem array sollen ID und Content der "Winner"-ID abgelegt werden
-    #foreach my $key (keys%contents){
-#	if 
- #   }
+    my $high=0;                                 # speichert den momentan höchsten GC-value
+    foreach my $key (keys%contents){
+	if($contents{$key}>$high){            # vergleicht ob der GC-value des aktuellen Keys höher ist als der momentan Höchste
+	    @Winner[0]=$key;
+	    @Winner[1]=$contents{$key};
+	    $high=$contents{key};
+	}
+    }
     return \@Winner;
 }
 
