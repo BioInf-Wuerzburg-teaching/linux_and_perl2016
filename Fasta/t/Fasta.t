@@ -38,7 +38,25 @@ my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
 can_ok('Fasta', 'count_bases');
-#is($fasta->count_bases(),"212 206 225 231","base count test");
+
+my $file1= "rosalind_dna.txt";
+
+my $parser= Fasta->new();
+
+$parser->filename($file1);
+
+my @base_counts = $parser->count_bases();
+
+my $counts1 = $base_counts[0];
+my $counts2 = $base_counts[1];
+my $counts3 = $base_counts[2];
+my $counts4 = $base_counts[3];
+
+my $concatenated_counts = $counts1 . $counts2;
+my $concatenated_counts2 = $concatenated_counts . $counts3;
+my $concatenated_counts3 = $concatenated_counts2 . $counts4;
+
+is($concatenated_counts3 ,"226 230 232 241 ","base count test");
 
 can_ok('Fasta', 'dna2rna');
 
