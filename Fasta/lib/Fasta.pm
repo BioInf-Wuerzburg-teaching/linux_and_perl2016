@@ -187,7 +187,11 @@ sub find_motif2{
         $result = index($sequence, $motif, $offset);
         
     }
+    chop $result;
+    chop $result;
+    return $result;
 }
+
 
 
 
