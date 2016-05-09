@@ -88,6 +88,15 @@ is($reverse_complement,"AACAGCTGGGGACCTCTGCACCACGTCTAGGGCTGTATCAGTGTTTGCAAAACACC
 
 can_ok('Fasta', 'put_zeile_into_array');
 
+my $file5= "rosalind_hamm.txt";
+
+my $parser5= Fasta->new();
+
+$parser5->filename($file5);
+
+is($parser5->put_zeile_into_array(), "457", "count bases test");
+
+
 can_ok('Fasta', 'find_motif2');
 
 my $file4= "rosalind_subs_for_test.txt";
