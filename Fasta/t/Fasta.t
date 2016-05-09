@@ -88,7 +88,7 @@ is($reverse_complement,"AACAGCTGGGGACCTCTGCACCACGTCTAGGGCTGTATCAGTGTTTGCAAAACACC
 
 can_ok('Fasta', 'put_zeile_into_array');
 
-my $file5= "rosalind_hamm.txt";
+my $file5= "rosalind_hamm_fuer_test.txt";
 
 my $parser5= Fasta->new();
 
