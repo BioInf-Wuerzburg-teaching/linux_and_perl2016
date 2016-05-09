@@ -1,0 +1,26 @@
+use strict;
+use warnings;
+use lib "./lib/";
+use Fasta;
+
+my $file= "rosalind_hamm.txt";
+
+my $parser= Fasta->new();
+
+$parser->filename($file);
+
+
+my @beidezeilen=$parser->put_zeile_into_scalar();
+#print $beidezeilen[1];
+my $count = $beidezeilen[0] ^ $beidezeilen[1];
+print "$count\n";	     
+#print \@the_keys;
+
+#$parser->read();
+#foreach my$ID (@{$parser->get_id()}){
+#	print $ID, "\n", $parser->get_seq($ID), "\n";
+#}
+
+
+#my $reverse_complement = $parser->reverse_complement();
+#print $reverse_complement
