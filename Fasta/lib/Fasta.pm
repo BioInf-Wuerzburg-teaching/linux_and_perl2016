@@ -182,14 +182,16 @@ sub find_motif2{
     my $result = index($sequence, $motif, $offset);
     while ($result != -1){
 	my $result_plus_one = $result + 1;
-	print "$result_plus_one ";
+	#print "$result_plus_one ";
+	push (@result, $result_plus_one);
 	$offset = $result + 1;
         $result = index($sequence, $motif, $offset);
         
     }
-    chop $result;
-    chop $result;
-    return $result;
+    #chop $result;
+    #chop $result;
+    #return $result;
+    return @result;
 }
 
 

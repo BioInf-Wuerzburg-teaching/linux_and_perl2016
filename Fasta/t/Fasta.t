@@ -90,15 +90,17 @@ can_ok('Fasta', 'put_zeile_into_array');
 
 can_ok('Fasta', 'find_motif2');
 
-my $file4= "rosalind_subs.txt";
+my $file4= "rosalind_subs_for_test.txt";
 
 my $parser4= Fasta->new();
 
 $parser4->filename($file4);
 
-my $result = $parser4->find_motif2();
+my @result = $parser4->find_motif2();
 
-is($result, "1 33 135 142 181 198 215 222 229 236 269 276 296 403 410 432 458 465 484 515 522 606 648 686 726 805 812 850 865 872 904 934 ","find motif test");
+my $result = join(" ", @result);
+
+is_deeply($result, "1 33 135 142 181 198 215 222 229 236 269 276 296 403 410 432 458 465 484 515 522 606 648 686 726 805 812 850 865 872 904 934","find motif test");
 
 done_testing();
 
