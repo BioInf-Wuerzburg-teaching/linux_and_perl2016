@@ -31,14 +31,14 @@ $fasta->read();
 
 can_ok('Fasta', 'get_seq');
 is($fasta->get_seq(''), undef, "idtestfail");
-is($fasta->get_seq(">ID1"),"AAAATTTCCGGG", "idtest");
+is($fasta->get_seq(">ID1"),"AAAATTTCCGGGUAGAAATTT", "idtest");
 
 can_ok('Fasta', 'get_id');
 my $expectedids=[">ID1"];
 is_deeply($fasta->get_id(), $expectedids, "correct list of ids");
 
 can_ok('Fasta', 'basecount');
-my %expectedcounts=(A=>4,C=>2,T=>3,G=>3);
+my %expectedcounts=(A=>8,C=>2,T=>6,G=>4);
 my $exphash= \%expectedcounts;
 is_deeply($fasta->basecount(">ID1"), $exphash, "correst counthash"); 
 
@@ -46,15 +46,15 @@ can_ok('Fasta', 'get_counts');
 
 
 can_ok('Fasta', 'translate');
-my $exprna="AAAAUUUCCGGG";
+my $exprna="AAAAUUUCCGGGUAGAAAUUU";
 is($fasta->translate(">ID1"), $exprna, "translationtest");
 
 can_ok('Fasta', 'reverse_complement');
-my $exprev="CCCGGAAATTTT";
+my $exprev="AAATTTCTUCCCGGAAATTTT";
 is ($fasta->reverse_complement(">ID1"), $exprev, "reversetest");
 
 can_ok('Fasta', 'GC');
-my $exparr=[">ID1","41.666667"];
+my $exparr=[">ID1","30.000000"];
 is_deeply($fasta->GC(), $exparr, "correct list");
 
 can_ok('Fasta', 'rna_translation');
