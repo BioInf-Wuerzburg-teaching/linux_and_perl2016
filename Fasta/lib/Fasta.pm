@@ -357,15 +357,20 @@ sub rna_translation{
 	    $rnaseq[$index]="G";
 	}
 	else{
-	    print "String fehlehrhaft oder zu Ende";
+	    $rnaseq[$index]="stop";
 	}
 	$index++;
     }
     $index=0;
     my $proteinseq="";
     while($index<@rnaseq){
+#	if($rnaseq[$index] eq "stop"){
+#	    last;
+#	}
+#	else{
 	$proteinseq=$proteinseq.$rnaseq[$index];
 	$index++;
+#	}
     }
     return $proteinseq;
 }
