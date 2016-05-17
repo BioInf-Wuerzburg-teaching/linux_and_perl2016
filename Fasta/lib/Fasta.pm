@@ -364,13 +364,13 @@ sub rna_translation{
     $index=0;
     my $proteinseq="";
     while($index<@rnaseq){
-#	if($rnaseq[$index] eq "stop"){
-#	    last;
-#	}
-#	else{
+	if($rnaseq[$index] eq "stop"){
+	    last;
+	}
+	else{
 	$proteinseq=$proteinseq.$rnaseq[$index];
 	$index++;
-#	}
+	}
     }
     return $proteinseq;
 }
