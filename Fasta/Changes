@@ -1,0 +1,6 @@
+Revision history for Perl extension Fasta.
+
+0.1  Fri Mar  4 13:18:59 2016
+	- original version; created by h2xs 1.23 with options
+		-A -X -b -n Fasta --use-new-tests --skip-exporter -v0.1 -b5.10.1
+
