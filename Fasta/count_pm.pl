@@ -3,7 +3,7 @@ use warnings;
 use lib "./lib/";
 use Fasta;
 
-my $file= "rosalind_hamm.txt";
+my $file= "rosalind_hamm2.txt";
 
 my $parser= Fasta->new();
 

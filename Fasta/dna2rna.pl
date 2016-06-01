@@ -3,7 +3,7 @@ use warnings;
 use lib "./lib/";
 use Fasta;
 
-my $file= "rosalind_rna.txt";
+my $file= "rosalind_rna2.txt";
 
 my $parser= Fasta->new();
 
